@@ -1,0 +1,12 @@
+<div>
+    {{input type="enail" value=emailAddress class="form-control" placeholder="Please type your email address." autofocus="autofocus"}}
+    {{textarea class="form-control" placeholder="Your message. (At least 5 characters.)" rows="7" value=message}}
+    <button class="btn btn-primary btn-lg btn-block" disabled={{isDisabled}} {{action 'sendMessage'}}>Send Message</button>
+
+<p>
+    {{#if responseMessage}}
+        <div class="alert alert-success">{{responseMessage}}</div>
+    {{/if}}
+    </p>
+</div>
+<br/><br/>
